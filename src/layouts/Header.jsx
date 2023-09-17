@@ -23,7 +23,7 @@ const Header = () => {
         <>
 
             {/* header for smaller devices */}
-
+        
             <Navbar onMenuOpenChange={setIsMenuOpen} className='flex sm:hidden'>
                 
                 <NavbarContent>
@@ -32,24 +32,34 @@ const Header = () => {
                         className="sm:hidden"
                     />
                     <NavbarBrand>
-                        <img src={Logo} alt="" className='w-40 h-auto' />
+                        <img src={Logo} alt="" className=' flex w-40 h-auto' />
                     </NavbarBrand>
                 </NavbarContent>
 
                 <NavbarContent className="hidden sm:flex gap-4" justify="center">
                     <NavbarItem>
                         <Link color="foreground" href="#">
-                            Features
+                            Home
                         </Link>
                     </NavbarItem>
                     <NavbarItem isActive>
                         <Link href="#" aria-current="page">
-                            Customers
+                            About Us
                         </Link>
                     </NavbarItem>
                     <NavbarItem>
                         <Link color="foreground" href="#">
-                            Integrations
+                            Services
+                        </Link>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <Link color="foreground" href="#">
+                            Careers
+                        </Link>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <Link color="foreground" href="#">
+                            Contact Us
                         </Link>
                     </NavbarItem>
                 </NavbarContent>
@@ -119,5 +129,5 @@ const Header = () => {
         </>
     )
 }
+export  default Header;
 
-export default Header
