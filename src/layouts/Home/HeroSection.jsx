@@ -6,7 +6,6 @@ const HeroSection = () => {
     return (
 
         <>
-
             <div className='flex flex-col lg:flex-row h-screen items-center justify-between px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32'>
 
                 <div className='flex flex-col gap-2 w-1/2'>
