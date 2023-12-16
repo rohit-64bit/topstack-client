@@ -9,7 +9,7 @@ const ServiceComponent = (props) => {
 
     return (
         <>
-            <div className='bg-white rounded-xl shadow-xl border-[2px] border-[#D9D9D9] flex flex-col justify-between h-full w-full p-8'>
+            <div className='bg-white rounded-xl box-shadow-custom border-[2px] border-[#D9D9D9] flex flex-col gap-5 justify-between max-h-full min-h-max w-full p-8'>
 
                 <div className='flex flex-col gap-2'>
                     <div className='font-bold'>{title}</div>
@@ -20,7 +20,7 @@ const ServiceComponent = (props) => {
 
                     <img src={img} alt="" className='w-[50%]' />
 
-                    <button className='py-2 w-full text-center border-[2px] border-[#D9D9D9] rounded-md hover:bg-gradient-to-r from-[#1D4CA1] to-[#00AEEF] hover:border-[#1D4CA1] hover:text-white transition-all duration-300 ease-in-out font-medium'>{buttonText}</button>
+                    <button className='py-1 sm:py-2 w-full text-center border-[2px] border-[#D9D9D9] rounded-md hover:bg-gradient-to-r from-[#1D4CA1] to-[#00AEEF] hover:border-[#1D4CA1] hover:text-white transition-all duration-300 ease-in-out font-medium'>{buttonText}</button>
 
                 </div>
 
@@ -62,11 +62,11 @@ const ServicesSection = () => {
     return (
 
         <>
-            <div className='flex flex-col h-screen items-center gap-24 justify-between p-4 sm:p-8 md:p-16 lg:p-24 xl:px-32 service-bg bg-auto bg-no-repeat bg-center'>
+            <div className='flex flex-col lg:h-screen items-center gap-10 lg:gap-24 justify-around p-5 md:p-16 lg:p-24 xl:p-32 service-bg bg-no-repeat bg-center'>
 
-                <div className='text-3xl font-bold text-center'>What do we offer</div>
+                <div className='text-3xl md:text-4xl font-bold text-center'>What do we offer</div>
 
-                <div className='grid grid-cols-3 gap-20 h-full'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-20 h-full'>
 
                     {
                         data?.map((data, index) => {

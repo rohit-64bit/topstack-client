@@ -11,16 +11,11 @@ const Header = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
 
     const menuItems = [
-        "Profile",
-        "Dashboard",
-        "Activity",
-        "Analytics",
-        "System",
-        "Deployments",
-        "My Settings",
-        "Team Settings",
-        "Help & Feedback",
-        "Log Out",
+        "Home",
+        "About Us",
+        "Services",
+        "Careers",
+        "Contact Us"
     ];
 
     useEffect(() => {
@@ -52,16 +47,19 @@ const Header = () => {
 
             {/* header for smaller devices */}
 
-            <Navbar onMenuOpenChange={setIsMenuOpen} className='flex sm:hidden'>
+            <Navbar onMenuOpenChange={setIsMenuOpen} className='block lg:hidden'>
 
-                <NavbarContent>
+                <NavbarContent className='flex items-center'>
+                    
+                    <NavbarBrand>
+                        <img src={Logo} alt="" className=' flex w-28 h-auto' />
+                    </NavbarBrand>
+
                     <NavbarMenuToggle
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                        className="sm:hidden"
+                        className="mx-auto"
                     />
-                    <NavbarBrand>
-                        <img src={Logo} alt="" className=' flex w-40 h-auto' />
-                    </NavbarBrand>
+
                 </NavbarContent>
 
                 <NavbarMenu>
@@ -84,51 +82,7 @@ const Header = () => {
 
             {/* header for desktop */}
 
-            {/* <Navbar shouldHideOnScroll className='hidden sm:flex pt-5 items-center'>
-
-                <NavbarContent className='w-max'>
-                    <img src={Logo} alt="" className='w-40 h-auto' />
-                </NavbarContent>
-
-                <NavbarContent className="hidden sm:flex gap-4 w-max" justify='center'>
-                    <NavbarItem>
-                        <Link color="foreground" href="#">
-                            Home
-                        </Link>
-                    </NavbarItem>
-                    <NavbarItem>
-                        <Link color="foreground" href="#">
-                            About Us
-                        </Link>
-                    </NavbarItem>
-                    <NavbarItem>
-                        <Link color="foreground" href="#">
-                            Services
-                        </Link>
-                    </NavbarItem>
-                    <NavbarItem>
-                        <Link href="#" aria-current="page">
-                            Careers
-                        </Link>
-                    </NavbarItem>
-                    <NavbarItem>
-                        <Link color="foreground" href="#">
-                            Contact Us
-                        </Link>
-                    </NavbarItem>
-                </NavbarContent>
-
-                <NavbarContent justify='end' className='w-max'>
-                    <NavbarItem>
-                        <Button as={NextLink} color="primary" href="#" variant="flat" className='rounded-full h-max w-max py-2 px-10'>
-                            Courses
-                        </Button>
-                    </NavbarItem>
-                </NavbarContent>
-
-            </Navbar> */}
-
-            <header className={!scrolling ? 'bg-white backdrop-blur-md bg-opacity-50 top-0 flex w-full justify-between items-center py-6 fixed sm:px-8 md:px-16 lg:px-24 xl:px-32 duration-1000 -translate-y-0' : 'bg-white backdrop-blur-md bg-opacity-50 top-0 flex w-full justify-between items-center py-6 fixed sm:px-8 md:px-16 lg:px-24 xl:px-32 duration-1000 -translate-y-40'}>
+            <header className={!scrolling ? 'bg-white backdrop-blur-md bg-opacity-50 top-0 hidden lg:flex w-full justify-between items-center py-6 fixed sm:px-8 md:px-16 lg:px-24 xl:px-32 duration-1000 -translate-y-0' : 'bg-white backdrop-blur-md bg-opacity-50 top-0 hidden lg:flex w-full justify-between items-center py-6 fixed sm:px-8 md:px-16 lg:px-24 xl:px-32 duration-1000 -translate-y-40'}>
 
                 <Link to='/'>
                     <img src={Logo} alt="" className='w-40 h-auto' />
@@ -136,15 +90,15 @@ const Header = () => {
 
                 <nav className='flex gap-3'>
 
-                    <Link>Home</Link>
-                    <Link>About US</Link>
-                    <Link>Services</Link>
-                    <Link>Careers</Link>
-                    <Link>Contact Us</Link>
+                    <a href='#home'>Home</a>
+                    <a href='#about'>About Us</a>
+                    <a href='#services'>Services</a>
+                    <a href='#carrers'>Careers</a>
+                    <a href='#contact'>Contact Us</a>
 
                 </nav>
 
-                <Link className='w-max bg-sky-200 h-max text-blue-600 px-10 py-2 rounded-full'>Courses</Link>
+                <a href='/' className='w-max bg-sky-200 h-max text-blue-600 px-10 py-2 rounded-full'>Courses</a>
 
             </header>
 

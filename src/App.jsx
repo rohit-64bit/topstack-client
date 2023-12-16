@@ -1,5 +1,6 @@
 import Home from './pages/Home'
 import Header from './layouts/Header'
+import Footer from './layouts/Footer'
 
 function App() {
 
@@ -9,6 +10,8 @@ function App() {
       <Header />
 
       <Home />
+
+      <Footer/>
 
     </>
   )
