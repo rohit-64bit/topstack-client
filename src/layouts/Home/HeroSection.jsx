@@ -6,7 +6,7 @@ const HeroSection = () => {
     return (
 
         <>
-            <div className='flex flex-col md:flex-row h-[87vh] lg:h-screen md:items-center md:justify-between p-5 md:p-16 lg:p-24 xl:p-32'>
+            <div id='home' className='flex flex-col md:flex-row h-[87vh] lg:h-screen md:items-center md:justify-between p-5 md:p-16 lg:p-24 xl:p-32'>
 
                 <div className='flex flex-col gap-2 w-max md:w-[60%] my-auto'>
 

@@ -6,7 +6,7 @@ const TestimonialComponent = () => {
   return (
     <div className="rounded-lg p-6 bg-white box-shadow-custom border-[2px] border-[#D9D9D9] w-full h-full">
 
-      <div className="font-bold tracking-tight text-black">Rohit Kumar Pandit</div>
+      <div className="font-bold tracking-tight text-black">Example Name</div>
 
       <div className="mb-5 text-xs font-bold tracking-tight text-[#909294]">Webapp Developer</div>
 

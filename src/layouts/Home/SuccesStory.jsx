@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react"
 import SuccessCard from '../../assets/success_card_test.png'
 
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
 const SuccesStory = () => {
 
   const [activeImage, setActiveImage] = useState('')
@@ -12,7 +16,11 @@ const SuccesStory = () => {
   const [prevImage, setPrevImage] = useState("")
 
   const data = [
-    SuccessCard, SuccessCard, SuccessCard, SuccessCard, SuccessCard
+    "http://cdn.proxiplays.com/images-1707550455529-871100057.jpeg",
+    "http://cdn.proxiplays.com/images-1707550455530-680680995.jpeg",
+    "http://cdn.proxiplays.com/images-1707550455541-305480867.jpeg",
+    "http://cdn.proxiplays.com/images-1707550455541-397232714.jpeg",
+    "http://cdn.proxiplays.com/images-1707550455547-372551019.jpeg"
   ]
 
   const changeCardState = (card, key, type) => {
@@ -51,15 +59,30 @@ const SuccesStory = () => {
 
         <div className="flex gap-10 overflow-hidden">
 
-          {/* {
-            data.map((data, i) => {
-              return (
-                <img src={data} alt="" className={data[i] == data ? "flex" : "hidden"} onClick={() => { changeCardState(data, i) }} key={i} />
-              )
-            })
-          } */}
-
-          <img src="" alt="" />
+          <Swiper
+            spaceBetween={50}
+            allowTouchMove={true}
+            allowSlideNext={true}
+            allowSlidePrev={true}
+            slidesPerView={3}
+            speed={4000}
+            loop={true}
+            autoplay={{ delay: 8000 }}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {
+              data.map((data, i) => {
+                return (
+                  <SwiperSlide
+                    key={i}
+                  >
+                    <img src={data} alt="" />
+                  </SwiperSlide>
+                )
+              })
+            }
+          </Swiper>
 
         </div>
 

@@ -5,7 +5,7 @@ import { AiOutlineCloudUpload } from "react-icons/ai";
 const CareersWithTopstack = () => {
   return (
 
-    <div className=" items-center justify-between p-5 md:p-16 lg:p-24 xl:p-32 service-bg bg-no-repeat bg-center flex flex-col gap-10 lg:gap-24">
+    <div id='careers' className=" items-center justify-between p-5 md:p-16 lg:p-24 xl:p-32 service-bg bg-no-repeat bg-center flex flex-col gap-10 lg:gap-24">
 
       <div className='text-3xl md:text-4xl font-bold text-center'>Careers With Topstack</div>
 

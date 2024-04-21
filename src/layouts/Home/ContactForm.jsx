@@ -6,7 +6,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="h-max items-center p-5 md:p-16 lg:p-24 xl:p-32 py-20 service-bg bg-no-repeat bg-center flex flex-col gap-24">
+      <div id='contact' className="h-max items-center p-5 md:p-16 lg:p-24 xl:p-32 py-20 service-bg bg-no-repeat bg-center flex flex-col gap-24">
 
         <div className='text-3xl md:text-4xl font-bold text-center'>Contact Us</div>
 
@@ -19,6 +19,19 @@ const ContactForm = () => {
             <input type="email" className='py-2 px-5 w-full outline outline-2 outline-[#D9D9D9] rounded-md focus:outline-[#1D4CA1] transition-all duration-300 ease-in-out text-base md:text-lg' placeholder='Email Address' />
 
             <input type="text" pattern='+[0-9]' className='py-2 px-5 w-full outline outline-2 outline-[#D9D9D9] rounded-md focus:outline-[#1D4CA1] transition-all duration-300 ease-in-out text-base md:text-lg' placeholder='Contact No' />
+
+            <select name=""
+              className='py-2 px-5 w-full outline outline-2 outline-[#D9D9D9] rounded-md focus:outline-[#1D4CA1] transition-all duration-300 ease-in-out text-base md:text-lg'
+              id="contactReason"
+              required
+            >
+              <option value="" disabled selected>Contacting For</option>
+              <option value="inquiry">General Inquiry</option>
+              <option value="support">Support</option>
+              <option value="feedback">Feedback</option>
+              <option value="aconsultation">Academic Consultation</option>
+              <option value="sodevlopment">Software Development</option>
+            </select>
 
             <textarea rows={7} type="text" className='py-2 px-5 w-full outline outline-2 outline-[#D9D9D9] rounded-md focus:outline-[#1D4CA1] transition-all duration-300 ease-in-out text-base md:text-lg' placeholder='Message' />
 

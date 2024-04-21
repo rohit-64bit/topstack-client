@@ -20,7 +20,7 @@ const ServiceComponent = (props) => {
 
                     <img src={img} alt="" className='w-[50%]' />
 
-                    <button className='py-1 sm:py-2 w-full text-center border-[2px] border-[#D9D9D9] rounded-md hover:bg-gradient-to-r from-[#1D4CA1] to-[#00AEEF] hover:border-[#1D4CA1] hover:text-white transition-all duration-300 ease-in-out font-medium'>{buttonText}</button>
+                    <a href='#contact' className='py-1 sm:py-2 w-full text-center border-[2px] border-[#D9D9D9] rounded-md hover:bg-gradient-to-r from-[#1D4CA1] to-[#00AEEF] hover:border-[#1D4CA1] hover:text-white transition-all duration-300 ease-in-out font-medium'>{buttonText}</a>
 
                 </div>
 
@@ -34,7 +34,7 @@ const ServicesSection = () => {
 
     const data = [
         {
-            title: 'Industrial Training& Placement Support',
+            title: 'Industrial Training & Placement Support',
             description: '"TopStack offers industrial training with cutting-edge tech, equipping you for real-world challenges. Elevate your skills today."',
             redirect: true,
             url: '/',
@@ -62,7 +62,7 @@ const ServicesSection = () => {
     return (
 
         <>
-            <div className='flex flex-col lg:h-screen items-center gap-10 lg:gap-24 justify-around p-5 md:p-16 lg:p-24 xl:p-32 service-bg bg-no-repeat bg-center'>
+            <div id='services' className='flex flex-col lg:h-screen items-center gap-10 lg:gap-24 justify-around p-5 md:p-16 lg:p-24 xl:p-32 service-bg bg-no-repeat bg-center'>
 
                 <div className='text-3xl md:text-4xl font-bold text-center'>What do we offer</div>
 

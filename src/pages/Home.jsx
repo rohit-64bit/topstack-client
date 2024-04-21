@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
 
-      <div className='flex flex-col h-max'>
+      <div className='flex flex-col h-max scroll-smooth'>
 
         <HeroSection />
         <AboutSection />
@@ -19,7 +19,7 @@ const Home = () => {
         <OurMission />
         <Testimonial />
         <CareersWithTopstack/>
-        <SuccesStory/>
+        {/* <SuccesStory/> */}
         <ContactForm />
 
       </div>

@@ -5,7 +5,7 @@ const AboutSection = () => {
     return (
         <>
 
-            <div className="flex flex-col-reverse gap-10 sm:gap-0 sm:flex-row h-screen items-center justify-around md:justify-between p-5 md:p-16 lg:p-24 xl:p-32 about-bg bg-no-repeat bg-center">
+            <div id='about' className="flex flex-col-reverse gap-10 sm:gap-0 sm:flex-row h-screen items-center justify-around md:justify-between p-5 md:p-16 lg:p-24 xl:p-32 about-bg bg-no-repeat bg-center">
 
                 <img src={AboutImg} alt="" className='sm:w-[30%] px-8 sm:px-0' />
 
